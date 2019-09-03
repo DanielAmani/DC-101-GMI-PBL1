@@ -5,10 +5,12 @@
 
 /*#include .....the preprocessor directive*/
 /*stdafx.h is the header file for input and output function*/
+/*Example printf(),scanf()*/
 
 #include "stdlib.h"
 
 /*stdlib.h is the header file for function memory allocation */
+/*Example system("cls"), system("pause")*/
 	
 
 int _tmain(int argc, _TCHAR* argv[])       /*main function*/
@@ -65,28 +67,33 @@ int opt_m,opt_A,opt_B,opt_C,opt_D,opt_E;      /*Main menu and submenu option*/
 
     /* Voltage Superposition 1 and Voltage Input 1&2*/
 
-	char CP;                /*Current Path option*/
+	char CP;										    /*Current Path option*/
 
 
 	/*variable for sub menu 4*/
-	int E2;               /*Option for converter*/
+	int E2;			/*Option for converter*/
 
-	float micro,mili,nopre,kilo,mega;     /*Var for converter*/
-
-
+	float micro,mili,nopre,kilo,mega;				    /*Var for converter*/
 
 
 
-main:
 
 
-do{  
+main: /* Label for goto Main Menu*/
+
+
+do{
+
+
 	system ("cls");
+	/*Clear Screen*/
+
+
 	  printf("\t\t\t ========================= \n");
       printf("\t\t\t Welcome to DC CIRCUIT 101 \n");
 	  printf("\t\t\t ========================= \n\n");
-	  printf("\t\t\t Version 4.7.5 Beta (Extend Version) \n");          /*Main menu*/
-	  printf("\t\t\t Note: Cosmetic changes in progess \n\n");          /*refer figure 1*/
+	  printf("\t\t\t Version 5.0.7 Beta \n");          /*Main menu*/
+	  printf("\t\t\t Note: Finale check in progess \n\n");          /*refer figure 1*/
 	  printf("\t1.POWER CHARGE ENERGY \n");
 	  printf("\t2.SERIES CIRCUIT\n");
 	  printf("\t3.PARALLEL CIRCUIT\n");
@@ -97,16 +104,19 @@ do{
 
       printf("\tChoice: ");									    /*display choice*/        
 	  scanf("%d",&opt_m);									    /*input choice main*/
+	  /*scanf is input funtion 
+	  %d sign decimal 
+	  &opt_m is address operator */
 
 /*option for main menu*/
 switch(opt_m)
 
-{       /*the begining for option main menu*/
+{															    /*the begining for option main menu*/
  
        case 1:                                                  /*If input main menu 1*/
 
 
-		   {             /*Open for power energy charge*/
+		   {												    /*Open for power energy charge*/
 
 
 
@@ -115,7 +125,7 @@ main_A:
 
 		printf("\t\t\t ============================= \n");    
         printf("\t\t\t POWER ENERGY CHARGE\n");
-		printf("\t\t\t ============================= \n\n");     /*Power Energy Charge menu*/
+		printf("\t\t\t ============================= \n\n");     /*Power Energy Charge submenu*/
 	    printf("\t1.POWER DISSIPATION\n");                       /*Refer to figure*/
 	    printf("\t2.ENERGY\n");								
 	    printf("\t3.CHARGE\n");									
@@ -142,7 +152,7 @@ main_A:
 			system("cls");                                      /*clear screen*/
 
 		printf("\t\t\t===================\n");                  
-	    printf("\t\t\tPower Dissipation\n");                    /*Display power dissipation menu*/
+	    printf("\t\t\tPower Dissipation\n");                    /*Formula power dissipation menu*/
 		printf("\t\t\t===================\n\n");				/*Refer to figure*/
 		printf("\t1. If V and I Given\n");
 		printf("\t2. If V and R Given\n");
@@ -160,19 +170,24 @@ main_A:
 
 			system ("cls");                                     /*Clear screen*/
 
-			printf("\tIf V and I Given\n\n");                   /*Formula Power Dissipation*/
-																/*Refer to figure*/
-			printf("\tEnter V : ");                             /*Display Voltage*/
+			printf("\t\t\t===================\n");                  
+			printf("\t\t\tIf V and I Given\n");                    /*Display power dissipation */
+			printf("\t\t\t===================\n\n");				/*Refer to figure*/
+
+			printf("\tEnter V (Volt): ");                             /*Display Voltage*/
 
 			scanf("%f",&v1);                                    /*Enter Voltage*/
+			/*scanf is input funtion 
+	         %f sign float 
+	         &opt_m is address operator */
 
-			printf("\tEnter I : ");                             /*Display Current*/
+			printf("\tEnter I(Ampere) : ");                             /*Display Current*/
 
 			scanf("%f",&i1);                                    /*Enter Current*/
 
 			p1 = i1 * v1;                                       /*Math operation*/
 
-			printf("\n\tPower = %.2f",p1);                      /*Display answer*/
+			printf("\n\tPower = %.2f Watt",p1);                      /*Display answer*/
 
 			break;                       /*Terminate the programe*/												/*Terminate the programe*/
 
@@ -182,19 +197,21 @@ main_A:
 
 			system ("cls");                                     /*Clear screen*/
 
-		    printf("\tIf V and R Given\n\n");                   /*Formula Power Dissipation*/
-																/*Refer figure*/
-			printf("\tEnter V : ")                          ;                             /*Display Voltage*/
+			printf("\t\t\t===================\n");                  
+			printf("\t\t\tIf V and R Given\n");                    /*Formula power dissipation*/
+			printf("\t\t\t===================\n\n");				/*Refer to figure*/
+
+			printf("\tEnter V (Volt) : ");                      /*Display Voltage*/
 
 			scanf("%f",&v2);                                    /*Enter Voltage*/
 
-			printf("\tEnter R : ");                             /*Display Resistor*/
+			printf("\tEnter R (ohm) : ");                             /*Display Resistor*/
 
 			scanf("%f",&r2);                                    /*Enter Resistor*/
 
 			p2=(v2 * v2) / r2;                                  /*Math operation*/
 
-			printf("\n\tPower = %.2f",p2);                      /*Display answer*/
+			printf("\n\tPower = %.2f Watt",p2);                      /*Display answer*/
 
 			break;                       /*Terminate the programe*/												/*Terminate the programe*/
 
@@ -204,19 +221,21 @@ main_A:
 
 			system ("cls");                                       /*Clear screen*/
 
-		    printf("\tIf I and R Given\n\n");					  /*Formula Power Dissipation*/
-																  /*Refer figure*/
-		 	printf("\tEnter I : ");                               /*Display Current*/
+			printf("\t\t\t===================\n");                  
+			printf("\t\t\tIf I and R Given\n");                    /*Formula power dissipation */
+			printf("\t\t\t===================\n\n");				/*Refer to figure*/
+
+		 	printf("\tEnter I (Ampere): ");                               /*Display Current*/
 
 			scanf("%f",&i3);                                      /*Enter Current*/
 
-			printf("\tEnter R : ");                               /*Display Resistor*/
+			printf("\tEnter R (ohm): ");                               /*Display Resistor*/
 
 			scanf("%f",&r3);                                      /*Enter Resistor*/
 
 			p3 = (i3 * i3) * r3;                                  /*Math operation*/
 
-			printf("\n\tPower = %.2f",p3);                        /*Display answer*/
+			printf("\n\tPower = %.2f Watt",p3);                        /*Display answer*/
 
 			break;                       /*Terminate the programe*/												  /*Terminate the programe*/
 
@@ -260,19 +279,21 @@ main_A:
 
 			system("cls");                                       /*clean screen*/
 
-         printf("\tENERGY = P x T\n");							 /*Formula Energy*/
-																 /*Refer figure*/
-		 printf("\tEnter Power : ");                             /*Display Power*/
+			printf("\t\t\t===================\n");                  
+			printf("\t\t\t\tEnergy\n");							  /*Formula Energy*/
+			printf("\t\t\t===================\n\n");				/*Refer to figure*/
+
+		 printf("\tEnter Power (Watt): ");                             /*Display Power*/
 
 		scanf("%f",&w4);                                         /*Enter Power*/
 
-		printf("\tEnter Time : ");                               /*Display Time*/
+		printf("\tEnter Time (Second): ");                               /*Display Time*/
 
 		scanf("%f",&t4);                                         /*Enter Time*/
 
-		e4 = w4 * t4;                                            /*Math operation*/
+		e4 = w4 / t4;                                            /*Math operation*/
 
-		printf("\n\tEnergy = %.2f",e4);                          /*Display answer*/
+		printf("\n\tEnergy = %.2f Joule",e4);                          /*Display answer*/
 
 	      printf("\n\t\t\t Do you want to repeat? y/n \n");      /*Display do you want to repeat*/
 
@@ -304,25 +325,31 @@ main_A:
 
 			system("cls");                                       /*clear screen*/
 
-		printf("\t3.CHARGE = E / V\n");							 /*Formula Charge*/
-																 /*Refer figure*/
-		printf("\tEnter Energy : ");                             /*Display Energy*/
+		printf("\t\t\t===================\n");                  
+			printf("\t\t\t\tCharge\n");							 /*Formula Charge*/
+			printf("\t\t\t===================\n\n");				/*Refer to figure*/
+
+		printf("\tEnter Energy (Joule) : ");                             /*Display Energy*/
 
 		scanf("%f",&e);                                          /*Enter Energy*/
 
-		printf("\tEnter Voltage :");                             /*Display Voltage*/
+		printf("\tEnter Voltage (Volt):");                             /*Display Voltage*/
 
 		scanf("%f",&v);                                          /*Enter Voltage*/
 
 		q = e / v;                                               /*Math operation*/
 
-		printf("\n\tCharge = %.2f",q);                           /*Display answer*/
+		printf("\n\tCharge = %.2f Couloumb",q);                           /*Display answer*/
 
 	      printf("\n\t\t\t Do you want to repeat? y/n \n");      /*Display do you want to repeat*/
 
 		  printf("\tChoice: ");            
 
-          scanf(" %c",&YN);                                      /*Enter y/n*/
+          scanf(" %c",&YN);
+		  /*scanf is input funtion 
+	         %c sign character
+	         &YN is address operator */
+		  /*Enter y/n*/
 
          if(YN=='Y'||YN=='y') 
 
@@ -348,7 +375,7 @@ main_A:
 
 			system ("cls");                                      /*clear screen*/
 
-        fflush(stdin);                                           /*clear buffer*/
+  
 
         printf("\t\t\t =================== \n"); 
 		printf("\t\t\t <INVALID SELECTION> \n");            /*Display invalid selection*/
@@ -389,7 +416,7 @@ main_B:
 
 		 case 1:                            /*If option 1*/
 
-         while(1)                           /*for repeat*/
+         while(1)                           /*force the program to be always true*/
 
 	    {                                   /*open for total resistance*/
 
@@ -398,7 +425,7 @@ main_B:
 SIR:
 	   printf("\t\t\t=========================\n");           /*Show total resistance series */
 	   printf("\t\t\tTOTAL RESISTANCE (SERIES)\n");
-	   printf("\t\t\t=========================\n\m");
+	   printf("\t\t\t=========================\n\n");
        printf("\tEnter number of series resistor (2-5) : ");       /*Display Option*/
 
 	   scanf("%d",&B1);                                    /*Enter Option*/
@@ -535,8 +562,8 @@ SIR:
 			 printf("\t\t\t================\n");      /*display voltage divider*/
 			 printf("\t\t\t VOLTAGE DIVIDER\n");
 			 printf("\t\t\t================\n\n");
-		  printf("\tVoltage divider is voltage drop each resistor\n");     /*display*/
-	
+
+
 	    printf("\n\tEnter Voltage Supply (volt):");                               /*Enter VS*/
 
 	    scanf("%f",&VS);                                                 /*input VS*/
@@ -550,6 +577,8 @@ SIR:
 	    scanf("%f",&ST);                                                   /*Input ST*/
 
 	    VD=((S/ST)*VS);                                           /*math process*/
+
+
 
 	    printf("\tVoltage Divider is : %.3f volt \n",VD);      /*display answer*/
 
@@ -621,7 +650,6 @@ SIR:
 
 			 system ("cls");                          /*clear screen*/
 
-        fflush(stdin);                                /*clear buffer*/
 
         printf("\t\t\t =================== \n");      /*display invalid selection*/
 		printf("\t\t\t <INVALID SELECTION> \n");
@@ -674,7 +702,8 @@ main_C:
     printf("\t\t\tCURRENT DROP\n");                     
 	printf("\t\t\t============\n");
     
-	printf("\n\tEnter Resistor 1 value\n");            
+	printf("\n\tEnter Resistor 1 value\n");          
+
     
 	printf("\tResistor 1 (ohm):"); scanf("%f",&P1);          /*Input for resistor 1*/
 
@@ -734,7 +763,7 @@ main_C:
 
 			PT=1/(1/P1+1/P2);                                      /*Mathematical operation*/
 			
-			printf("\n\tTotal resistance is %f ohm\n",PT);         /*Display the total resistance*/
+			printf("\n\tTotal resistance is %.3f ohm\n",PT);         /*Display the total resistance*/
 			
 			break;                       /*Terminate the programe*/                                                 /*Terminate the programe*/
 			                                                       /*Refer to figure ...*/
@@ -755,7 +784,7 @@ main_C:
 
 			PT=1/(1/P1+1/P2+1/P3);                                  /*Mathematical operation*/
 			
-			printf("\n\tTotal resistance is %f ohm\n",PT);          /*Display the total resistance*/
+			printf("\n\tTotal resistance is %.3f ohm\n",PT);          /*Display the total resistance*/
 			
 			break;                       /*Terminate the programe*/                                                  /*Terminate the programe*/
 			                                                        /*Refer to figure ...*/
@@ -780,7 +809,7 @@ main_C:
 
 			PT=1/(1/P1+1/P2+1/P3+1/P4);                             /*Mathematical operation*/                        
 			
-			printf("\n\tTotal resistance is %f ohm\n",PT);          /*Display the total resistance*/
+			printf("\n\tTotal resistance is %.3f ohm\n",PT);          /*Display the total resistance*/
 			
 			break;                       /*Terminate the programe*/                                                  /*Terminate the programe*/
 			                                                        /*Refer to figure ...*/
@@ -809,7 +838,7 @@ main_C:
 			 
 			PT=1/(1/P1+1/P2+1/P3+1/P4+1/P5);                        /*Mathematical operation*/ 
 			
-			printf("\n\tTotal resistance is %f ohm\n",PT);          /*Display the total resistance*/
+			printf("\n\tTotal resistance is %.3f ohm\n",PT);          /*Display the total resistance*/
 			
 			break;                       /*Terminate the programe*/                                                  /*Terminate the programe*/
 			                                                        /*Refer to figure ...*/
@@ -845,6 +874,7 @@ main_C:
 	
 	printf("\n\tEnter total current");                              /*Display enter total current*/
 	
+
 	printf("\n\tTotal current (ampere):"); scanf("%f",&IT);         /*Input for total current*/
 
 	printf("\n\tEnter total resistance");                           /*Display enter total resistance*/
@@ -876,7 +906,7 @@ main_C:
 	    
 	    system ("cls");                                             /*Clear screen*/
         
-		fflush(stdin);                                              /*Clear buffer*/
+
         
 		printf("\t\t\t =================== \n");                    /*If invalid selection*/
 		printf("\t\t\t <INVALID SELECTION> \n");           
@@ -1030,7 +1060,7 @@ par:/* Goto Parallel*/
 	}
 
 sir:/*Series Label */
-
+	printf("\n============================================\n\n");
 	printf("\n\n\t How many Series resistor (0~5): ");
 	scanf("%d",&DS);/*Enter qty of resistor-Series*/  /*refer figure */
 	
@@ -1143,6 +1173,8 @@ res: /* Label for Total Resistance */
 
 	RT=PT+ST;/*Calculate Series+Pararalle and display the value*/   /*refer figure */
 
+	printf("\n============================================\n\n");
+
 	printf("\n\t Total Parallel : %.3f ohm\n",PT);
 	printf("\n\t Total Series: %.3f ohm\n ",ST);
 	printf("\n\t Total Series + Parallel : %.3f ohm\n\n",RT);
@@ -1218,7 +1250,7 @@ res: /* Label for Total Resistance */
     scanf(" %f",&RL);/*Get Value resistor Load*/
 
 
-
+	printf("\n============================================\n\n");
 
 	printf("\n\tStep 1: Open resistor load \n");
 	printf("\t ______[R1]________/    _[R4]____\n");/*Generating diagram*/   
@@ -1229,16 +1261,20 @@ res: /* Label for Total Resistance */
 	printf("\t|S|            |2|            |L|\n");
 	printf("\t |              |              |\n");
 	printf("\t |              |              |\n");
-	printf("\t |_____[R3]_____|__/    _______|\n\n");
+	printf("\t |_____[R3]_____|__/    _______|\n\n\n");
 
-	printf("\tStep 2: Determine Voltage Thevenin (VTH) \n");/*Find V-th*/
+
+	printf("\n============================================\n\n");
+
+
+	printf("\tStep 2: Determine Voltage Thevenin (VTH) \n\n");/*Find V-th*/
 
 	VTH=((R2)/(R1+R2+R3))*VS;/*VTH=(RTH/RT)*VS*/
 
-	printf("\t\t\t Voltage Thevenin (VTH): %.3f V\n",VTH);
+	printf("\t\t\t Voltage Thevenin (VTH): %.3f V\n\n\n",VTH);
 
 
-
+printf("\n============================================\n\n");
 
 	printf("\t Step 3: Determine The Resistance Thevenin (RTH) \n");
 	printf("\t by shorting the Voltage supply (VS) \n");
@@ -1251,24 +1287,24 @@ res: /* Label for Total Resistance */
 	printf("\t                  |              |\n");
 	printf("\t                  |____[ R2 ]____|\n\n");
 
-	X_RTH=(1/R1+R3)+(1/R2);/*Dual step calculation is need bacause limited memory*/
+	X_RTH=(1/(R1+R3))+(1/R2);/*Dual step calculation is need bacause limited memory*/
 
-	RTH=(1/(X_RTH))+R4;/*It for RTH*/
+	RTH=(1/X_RTH)+R4;/*It for RTH*/
 
-	printf("\t\t\t Resistance Thevenin (RTH): %.3f ohm\n",RTH);
-
-
+	printf("\t\t\t Resistance Thevenin (RTH): %.3f ohm \n\n\n",RTH);
 
 
-	printf("\tStep 4:Draw the Thevenin Circuit\n");
-    printf("\t to find Voltage Load(VL) & Current Load(IL) \n");
+	printf("\n============================================\n\n");
+
+	printf("\n\n\tStep 4:Draw the Thevenin Circuit\n");
+    printf("\t to find Voltage Load(VL) & Current Load(IL) \n\n");
 
 	printf("\t ______[RTH]_____\n");/*Diagram*/                /*refer figure */
 	printf("\t |              |\n");
 	printf("\t|V|            |L|\n");
 	printf("\t|T|            |R|\n");
 	printf("\t|H|             |\n");
-	printf("\t |______________|\n");
+	printf("\t |______________|\n\n");
 
 	VL=((RL)/(RL+RTH))*VTH;/*Find VL and IL Value*/
 
@@ -1319,69 +1355,77 @@ res: /* Label for Total Resistance */
 
 	printf("\t\t\t Part One \n");                     /*refer figure */
 
-	printf("Enter Voltage Supply 1 (V) : ");
+	printf("\tEnter Voltage Supply 1 (V) : ");
 	scanf(" %f",&V1);/*Voltage Supply V1*/
 
-	printf("\nOkey...then short the VS2 \n and find the total resistance\n\n");
-	printf("Total Resistance (ohm) : ");
+	printf("\n\tOkey...then short the VS2 \n and find the total resistance\n\n");
+	printf("\tTotal Resistance (ohm) : ");
 	scanf(" %f",&RT1);/*Total R without V2*/
 
 	IT1=V1/RT1;/*Find IT without V2*/
 
-	printf("Total Ampere = %.3f A\n",IT1);
+	printf("\tTotal Ampere = %.3f A\n",IT1);
 
-	printf("\n Next find the Resistance or X current flow value \n\n");/*Find Ix without V2*/
+	printf("\n\t Next find the Resistance or X current flow value \n\n");/*Find Ix without V2*/
 
-	printf("Value Rx (ohm) : ");
+	printf("\tValue Rx (ohm) : ");
 	scanf(" %f",&RX);/*Value of Rx*/
 
-	printf("Value opesite Rx (ohm): ");
+	printf("\tValue opesite Rx (ohm): ");
 	scanf(" %f",&RX1);/*Value opesite Rx*/
 
 	IX1=(RX1/(RX+RX1))*IT1;/*Formula for Current Rules*/
 
-	printf("\n So the total value of I-Rx = %.3f A",IX1);/* Value of Ix without V2*/
+	printf("\n\t So the total value of I-Rx = %.3f A",IX1);/* Value of Ix without V2*/
 
 
 
 
-	printf("\n============================================\n");
+	printf("\n\t============================================\n");
 
 
 
 
 	printf("\t\t\t Part Two \n");                           /*refer figure */
 
-	printf("\n\nEnter Voltage Supply 2 (V): ");
+	printf("\n\n\tEnter Voltage Supply 2 (V): ");
 	scanf(" %f",&V2);/*Voltage Supply V2*/
 
-	printf("\n\n Okey...then short the VS1 \n and find the total resistance \n\n");
+	printf("\n\n\t Okey...then short the VS1 \n and find the total resistance \n\n");
 
-	printf("Total Resistance (ohm) : ");
+	printf("\tTotal Resistance (ohm) : ");
 	scanf(" %f",&RT2);/*Total R without V1*/
 
 	IT2=V2/RT2;/*Find IT without V1*/
 
-	printf("Total Ampere = %f  A \n",IT2);
+	printf("\tTotal Ampere = %.3f  A \n",IT2);
 
-	printf("\n Next find the Resistor X current flow value \n\n");/*Find Ix without V1*/
-	printf("Value Rx : %f ohm\n",RX);
+	printf("\n\t Next find the Resistor X current flow value \n\n");/*Find Ix without V1*/
+	printf("\tValue Rx : %.3f ohm\n",RX);
 
-	printf("Value opesite Rx (ohm) : ");
+	printf("\tValue opesite Rx (ohm) : ");
 	scanf(" %f",&RX2);/*Value opesite Rx*/
 
 	IX2=(RX2/(RX+RX2))*IT2;/*Formula for Current Rules*/
 
 
 
-	printf("\n So the total value of I-Rx = %.3f A",IX2);/* Value of Ix without V1*/
+	printf("\n\t So the total value of I-Rx = %.3f A",IX2);/* Value of Ix without V1*/
 
 
 	 
-	printf("\n============================================\n");
 	
 
-	printf("\n Last step: Check the current path at AX \n\n");/*Find I(superposition)*/  
+	while(1)/*Forcing the programe to always true*/
+
+
+	    {
+	
+CP:
+			
+    printf("\n\t============================================\n\n");
+
+	printf("\n\t Last step: Check the current path at AX \n\n");/*Find I(superposition)*/  
 	printf("\t    A            B\n");
 	printf("\t_________    _________\n");                       /*Check Current Path*/
 	printf("\t|   |   |    |   |   |\n");                        /*refer figure */
@@ -1389,8 +1433,8 @@ res: /* Label for Total Resistance */
 	printf("\t-   X   -    -   X   +\n");
 	printf("\t|___|___|    |___|___|\n\n");
 
-	printf("If the current path like A (positive meet negative) enter 'A' \n");
-	printf("If the current path like B (positive meet positive) enter 'B' \n");
+	printf("\tIf the current path like A (positive meet negative) enter 'A' \n");
+	printf("\tIf the current path like B (positive meet positive) enter 'B' \n");
 
 printf("\n\t\t\t Option:");/*Choose for determine the Ampere must being subract or add*/
 
@@ -1400,19 +1444,21 @@ printf("\n\t\t\t Option:");/*Choose for determine the Ampere must being subract 
 
 {	
 	/*Start IF Adding current*/
-
-	printf("ADDING-(positive meet negative) \n\n");/*if Add*/   /*refer figure */
-	printf("_________ \n");/*image*/
-	printf("|   |   |\n");
-	printf("+   R   +\n");
-	printf("-   X   -\n");
-	printf("|___|___|\n\n");
+	printf("\n\t============================================\n\n");
+	printf("\tADDING-(positive meet negative) \n\n");/*if Add*/   /*refer figure */
+	printf("\t_________ \n");/*image*/
+	printf("\t|   |   |\n");
+	printf("\t+   R   +\n");
+	printf("\t-   X   -\n");
+	printf("\t|___|___|\n\n");
 
     IS=IX1+IX2; /*Formula Current and Voltage*/
 	VP=IS*RX;
 
-	printf("Total Current for Rx = %.3f A\n",IS);/*Display value*/
-	printf("Total Voltage for Rx = %.3f V\n\n",VP);
+	printf("\tTotal Current for Rx = %.3f A\n",IS);/*Display value*/
+	printf("\tTotal Voltage for Rx = %.3f V\n\n",VP);
+
+	goto end_CP;
 
 	/*End of Adding Current Path*/
 }
@@ -1421,13 +1467,13 @@ printf("\n\t\t\t Option:");/*Choose for determine the Ampere must being subract 
 
 {
 	/* Start Subtract Current Path */
-
-	printf("SUBTRACT-(positive meet positive) \n\n");/*if Subtract*/   /*refer figure */
-	printf("_________ \n");
-	printf("|   |   |\n");
-	printf("+   R   -\n");
-	printf("-   X   +\n");
-	printf("|___|___|\n\n");
+	printf("\n\t============================================\n\n");
+	printf("\tSUBTRACT-(positive meet positive) \n\n");/*if Subtract*/   /*refer figure */
+	printf("\t_________ \n");
+	printf("\t|   |   |\n");
+	printf("\t+   R   -\n");
+	printf("\t-   X   +\n");
+	printf("\t|___|___|\n\n");
 
     IS=IX1-IX2; /*Checking if value of subtract became negative*/
 
@@ -1441,8 +1487,10 @@ printf("\n\t\t\t Option:");/*Choose for determine the Ampere must being subract 
 
 	/*Display value*/
 
-	printf("Total Current for Rx = %.3f A\n",ISX);    /*refer figure */
-	printf("Total Voltage for Rx = %.3f V\n\n",VP);
+	printf("\tTotal Current for Rx = %.3f A\n",ISX);    /*refer figure */
+	printf("\tTotal Voltage for Rx = %.3f V\n\n",VP);
+
+	goto end_CP;
 
 	/*End IF Current total < 0 ,Change back to positive by invert formula*/
 
@@ -1453,23 +1501,43 @@ printf("\n\t\t\t Option:");/*Choose for determine the Ampere must being subract 
 	VP=IS*RX; /*Formula*/
 
 	/*Display Value*/
-	printf("Total Current for Rx = %.3f A\n",IS);    /*refer figure */
-	printf("Total Voltage for Rx = %.3f V\n\n",VP);
+	printf("\tTotal Current for Rx = %.3f A\n",IS);    /*refer figure */
+	printf("\tTotal Voltage for Rx = %.3f V\n\n",VP);
+
+	goto end_CP;
 
 	/*End Subtract Current Path*/
 
 
 }
 
+end_CP:
+	      printf("\n============================================\n\n");
 
-	      printf("\n\n\t\t\t Do you want to repeat? y/n \n");
+	      printf("\n\n\t\t\t Do you want to change current path? y/n \n");
+		  printf("\tChoice: ");
+          scanf(" %c",&YN);
+         if(YN=='Y'||YN=='y')
+
+		 goto CP;                      
+		 
+		
+	     else
+		 break ;
+
+		 /*End Current Path Chooser */
+
+         }
+
+		 printf("\n\t============================================\n\n");
+		 printf("\n\n\t\t\t Do you want to repeat? y/n \n");
 		  printf("\tChoice: ");
           scanf(" %c",&YN);
          if(YN=='Y'||YN=='y')
 
 		 continue;                       /*Repeat*/
 		 
-		 /*Repeat*/
+		 
 	     else
 		 goto main_D;/*Goto Submenu D */
 
@@ -1490,7 +1558,7 @@ printf("\n\t\t\t Option:");/*Choose for determine the Ampere must being subract 
 		 default:
 			system ("cls"); /* Clear screen */
 
-        fflush(stdin);/* Clear Buffer */
+    
 
         printf("\t\t\t =================== \n"); /*Invalid selection*/
 		printf("\t\t\t <INVALID SELECTION> \n");
@@ -1654,7 +1722,7 @@ main_E:
 		/*Start Micro*/
 		/*Refer Figure*/
 
-		printf("\tInput data : ");
+		printf("\tInput data  : ");
 		scanf(" %f",&micro);
 
 
@@ -1981,8 +2049,7 @@ main_E:
 	printf("\t |_____[R3]_____|__/    _______|\n\n");
 
 	printf("\tStep 2: Determine Voltage Thevenin (VTH) \n");/*Find V-th*/
-
-	printf("\n\t and it will show Voltage Thevenin (VTH)\n");
+	printf("\t and it will show Voltage Thevenin (VTH)\n\n");
 
 	printf("\tStep 3: Determine The Resistance Thevenin (RTH) \n by shorting the Voltage supply (VS) \n\n");
 	printf("\t                   ____[R1+R3]____\n");
@@ -2015,7 +2082,7 @@ main_E:
 /*Input Y/N*/
 
 
-         if(YN=='N'||YN=='n')
+         if(YN=='Y'||YN=='y')
 
 		 continue;                       /*Repeat*/
 		 
@@ -2273,8 +2340,7 @@ main_E:
 			 /*Clear screen*/
 
 
-        fflush(stdin);
-		/*Clear buffer*/
+       
 
 		/*Display Invaid*/
 
@@ -2327,8 +2393,7 @@ main_E:
 		  /*Clear Screen*/
 
 
-        fflush(stdin);
-		/*Clear Buffer */
+        
 
 		/*Display Invalid*/
 
