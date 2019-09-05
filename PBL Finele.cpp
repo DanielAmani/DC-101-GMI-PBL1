@@ -67,13 +67,16 @@ int opt_m,opt_A,opt_B,opt_C,opt_D,opt_E;      /*Main menu and submenu option*/
 
     /* Voltage Superposition 1 and Voltage Input 1&2*/
 
-	char CP;										    /*Current Path option*/
+	char CP;										    
+	/*Current Path option*/
 
 
 	/*variable for sub menu 4*/
-	int E2;			/*Option for converter*/
+	int E2;			
+	/*Option for converter*/
 
-	float micro,mili,nopre,kilo,mega;				    /*Var for converter*/
+	float micro,mili,nopre,kilo,mega;				    
+	/*Var for converter*/
 
 
 
@@ -92,8 +95,7 @@ do{
 	  printf("\t\t\t ========================= \n");
       printf("\t\t\t Welcome to DC CIRCUIT 101 \n");
 	  printf("\t\t\t ========================= \n\n");
-	  printf("\t\t\t Version 5.0.7 Beta \n");          /*Main menu*/
-	  printf("\t\t\t Note: Finale check in progess \n\n");          /*refer figure 1*/
+	  printf("\t\t\t Version 7.4.5 Beta \n");          /*Main menu*/         /*refer figure Main*/
 	  printf("\t1.POWER CHARGE ENERGY \n");
 	  printf("\t2.SERIES CIRCUIT\n");
 	  printf("\t3.PARALLEL CIRCUIT\n");
@@ -126,7 +128,7 @@ main_A:
 		printf("\t\t\t ============================= \n");    
         printf("\t\t\t POWER ENERGY CHARGE\n");
 		printf("\t\t\t ============================= \n\n");     /*Power Energy Charge submenu*/
-	    printf("\t1.POWER DISSIPATION\n");                       /*Refer to figure*/
+	    printf("\t1.POWER DISSIPATION\n");                       /*Refer to figure A*/
 	    printf("\t2.ENERGY\n");								
 	    printf("\t3.CHARGE\n");									
 		printf("\t4.<<<Return Main Menu \n\n");     
@@ -153,7 +155,7 @@ main_A:
 
 		printf("\t\t\t===================\n");                  
 	    printf("\t\t\tPower Dissipation\n");                    /*Formula power dissipation menu*/
-		printf("\t\t\t===================\n\n");				/*Refer to figure*/
+		printf("\t\t\t===================\n\n");				/*Refer to figure A1*/
 		printf("\t1. If V and I Given\n");
 		printf("\t2. If V and R Given\n");
 		printf("\t3. If I and R Given\n");
@@ -172,7 +174,7 @@ main_A:
 
 			printf("\t\t\t===================\n");                  
 			printf("\t\t\tIf V and I Given\n");                    /*Display power dissipation */
-			printf("\t\t\t===================\n\n");				/*Refer to figure*/
+			printf("\t\t\t===================\n\n");				/*Refer to figure A1.1*/
 
 			printf("\tEnter V (Volt): ");                             /*Display Voltage*/
 
@@ -181,7 +183,7 @@ main_A:
 	         %f sign float 
 	         &opt_m is address operator */
 
-			printf("\tEnter I(Ampere) : ");                             /*Display Current*/
+			printf("\tEnter I(Ampere) : ");                          /*Display Current*/
 
 			scanf("%f",&i1);                                    /*Enter Current*/
 
@@ -199,7 +201,7 @@ main_A:
 
 			printf("\t\t\t===================\n");                  
 			printf("\t\t\tIf V and R Given\n");                    /*Formula power dissipation*/
-			printf("\t\t\t===================\n\n");				/*Refer to figure*/
+			printf("\t\t\t===================\n\n");				/*Refer to figure A1.2*/
 
 			printf("\tEnter V (Volt) : ");                      /*Display Voltage*/
 
@@ -223,7 +225,7 @@ main_A:
 
 			printf("\t\t\t===================\n");                  
 			printf("\t\t\tIf I and R Given\n");                    /*Formula power dissipation */
-			printf("\t\t\t===================\n\n");				/*Refer to figure*/
+			printf("\t\t\t===================\n\n");				/*Refer to figure A1.3*/
 
 		 	printf("\tEnter I (Ampere): ");                               /*Display Current*/
 
@@ -281,7 +283,7 @@ main_A:
 
 			printf("\t\t\t===================\n");                  
 			printf("\t\t\t\tEnergy\n");							  /*Formula Energy*/
-			printf("\t\t\t===================\n\n");				/*Refer to figure*/
+			printf("\t\t\t===================\n\n");				/*Refer to figure A2*/
 
 		 printf("\tEnter Power (Watt): ");                             /*Display Power*/
 
@@ -325,9 +327,9 @@ main_A:
 
 			system("cls");                                       /*clear screen*/
 
-		printf("\t\t\t===================\n");                  
+			printf("\t\t\t===================\n");                  
 			printf("\t\t\t\tCharge\n");							 /*Formula Charge*/
-			printf("\t\t\t===================\n\n");				/*Refer to figure*/
+			printf("\t\t\t===================\n\n");			 /*Refer to figure A3*/
 
 		printf("\tEnter Energy (Joule) : ");                             /*Display Energy*/
 
@@ -400,7 +402,7 @@ main_B:
 			   system ("cls");                 /*clear screen*/
 
 		printf("\t\t\t ============== \n");    /*Sub Menu for series circuit*/
-		printf("\t\t\t SERIES CIRCUIT\n");     /*refer to figure 3*/
+		printf("\t\t\t SERIES CIRCUIT\n");     /*refer to figure B*/
 		printf("\t\t\t ============== \n\n");
 	    printf("\t1.TOTAL RESISTANCE\n");
 	    printf("\t2.VOLTAGE DIVIDER\n");
@@ -424,7 +426,7 @@ main_B:
 
 SIR:
 	   printf("\t\t\t=========================\n");           /*Show total resistance series */
-	   printf("\t\t\tTOTAL RESISTANCE (SERIES)\n");
+	   printf("\t\t\tTOTAL RESISTANCE (SERIES)\n");            /*refer figure B1*/
 	   printf("\t\t\t=========================\n\n");
        printf("\tEnter number of series resistor (2-5) : ");       /*Display Option*/
 
@@ -440,7 +442,7 @@ SIR:
 		
 		scanf("%f",&S1);                   /*Display and enter resistor 1 & 2*/
 
-	    printf("\tEnter R2 (ohm):");
+	    printf("\tEnter R2 (ohm):");       /*refer figure B1.1*/
 		 
 		scanf("%f",&S2);
 
@@ -457,7 +459,7 @@ SIR:
 		
 		scanf("%f",&S1);                   /*Display enter resistor 1,2,3*/
 
-	    printf("\tEnter R2 (ohm):");
+	    printf("\tEnter R2 (ohm):");       /*refer figure B1.2*/
 		
 		scanf("%f",&S2);
 
@@ -476,7 +478,7 @@ SIR:
 		
 		scanf("%f",&S1);        /*Display and enter resistor 1,2,3,4*/
 
-	    printf("\tEnter R2 (ohm):");
+	    printf("\tEnter R2 (ohm):");   /*refer figure B1.3*/
 		
 		scanf("%f",&S2);
 
@@ -499,9 +501,9 @@ SIR:
 	
 		printf("\tEnter R1 (ohm):");
 		
-		scanf("%f",&S1);			 /*Display and enter resistor 1,2,3,4,5*/
+		scanf("%f",&S1);			       /*Display and enter resistor 1,2,3,4,5*/
 
-	    printf("\tEnter R2 (ohm):");
+	    printf("\tEnter R2 (ohm):");       /*refer figure B1.4*/     
 		
 		scanf("%f",&S2);
 
@@ -560,7 +562,7 @@ SIR:
 			system("cls");                   /*clear screen*/
 
 			 printf("\t\t\t================\n");      /*display voltage divider*/
-			 printf("\t\t\t VOLTAGE DIVIDER\n");
+			 printf("\t\t\t VOLTAGE DIVIDER\n");       /*refer figure B2*/
 			 printf("\t\t\t================\n\n");
 
 
@@ -609,7 +611,7 @@ SIR:
 			system("cls");                         /* clear screen*/
 
 		  printf("\t\t\t==============\n");        /*display total current*/
-		  printf("\t\t\t TOTAL CURRENT\n");
+		  printf("\t\t\t TOTAL CURRENT\n");        /*refer figure B3*/
 		  printf("\t\t\t==============\n\n");
 
 		  printf("\n\tEnter voltage supply (volts) :");          /*display vs*/
@@ -679,7 +681,7 @@ main_C:
 
 		printf("\t\t\t ================ \n");       /*Parallel circuit menu*/
         printf("\t\t\t PARALLEL CIRCUIT \n");
-		printf("\t\t\t ================ \n\n");
+		printf("\t\t\t ================ \n\n");     /*refer to figure C */
 	    printf("\t1.CURRENT DROP\n");
 	    printf("\t2.TOTAL RESISTANCE\n");
 	    printf("\t3.TOTAL VOLTAGE\n");
@@ -700,7 +702,7 @@ main_C:
 	
 	printf("\t\t\t============\n");                 /*Current Drop menu*/
     printf("\t\t\tCURRENT DROP\n");                     
-	printf("\t\t\t============\n");
+	printf("\t\t\t============\n");                 /*refer to figure c1 */
     
 	printf("\n\tEnter Resistor 1 value\n");          
 
@@ -717,7 +719,7 @@ main_C:
 
     Ir = (P2/(P2+P1))*Is;                                      /*Mathematical operation*/
     
-	printf("\n\t%.2f ampere\n",Ir);                            /*Display answer(current supply)*/
+	printf("\n\t Current at R1 %.2f ampere\n",Ir);                            /*Display answer(current supply)*/
 	      
 	printf("\n\t\t\t Do you want to repeat? y/n \n");          /*Choice for repeat*/
 		  
@@ -766,7 +768,7 @@ main_C:
 			printf("\n\tTotal resistance is %.3f ohm\n",PT);         /*Display the total resistance*/
 			
 			break;                       /*Terminate the programe*/                                                 /*Terminate the programe*/
-			                                                       /*Refer to figure ...*/
+			                                                       /*Refer to figure C2.1*/
 			    
 		case 3:                                                    /*If the input is 3*/
 			
@@ -787,7 +789,7 @@ main_C:
 			printf("\n\tTotal resistance is %.3f ohm\n",PT);          /*Display the total resistance*/
 			
 			break;                       /*Terminate the programe*/                                                  /*Terminate the programe*/
-			                                                        /*Refer to figure ...*/
+			                                                        /*Refer to figure C2.2*/
 
 		case 4:                                                     /*If the input is 4*/
 			
@@ -812,7 +814,7 @@ main_C:
 			printf("\n\tTotal resistance is %.3f ohm\n",PT);          /*Display the total resistance*/
 			
 			break;                       /*Terminate the programe*/                                                  /*Terminate the programe*/
-			                                                        /*Refer to figure ...*/
+			                                                        /*Refer to figure C2.3*/
 
 		case 5:                                                     /*If the input is 5*/
 			
@@ -841,7 +843,7 @@ main_C:
 			printf("\n\tTotal resistance is %.3f ohm\n",PT);          /*Display the total resistance*/
 			
 			break;                       /*Terminate the programe*/                                                  /*Terminate the programe*/
-			                                                        /*Refer to figure ...*/
+			                                                        /*Refer to figure C2.4*/
 	
 		default: 	                                                /*If input beside (2-5)*/
 			
@@ -869,7 +871,7 @@ main_C:
 	    {                                                /*Open for total voltage*/
 			system("cls");                                          /*Clear screen*/
 	printf("\t\t\t=============\n");                                /*Total voltage menu*/
-    printf("\t\t\tTOTAL VOLTAGE\n");
+    printf("\t\t\tTOTAL VOLTAGE\n");                                /*Refer to figure C3 */ 
 	printf("\t\t\t=============\n\n");
 	
 	printf("\n\tEnter total current");                              /*Display enter total current*/
@@ -939,7 +941,7 @@ main_D:
 
 
 		printf("\t\t\t =================== \n");                   /*Combination Submenu*/
-        printf("\t\t\t COMBINATION CIRCUIT\n");                    /*refer figure */
+        printf("\t\t\t COMBINATION CIRCUIT\n");                    /*refer figure D*/
 		printf("\t\t\t =================== \n\n");
 	    printf("\t1.Total Resistance Series Parallel\n");
 	    printf("\t2.Thevenin Circuit Theorem\n");
@@ -949,7 +951,9 @@ main_D:
 
 		printf("\tChoice: ");                                      /*Choice for submenu*/
 		 scanf("%d",&opt_D);                            /*Input submenu combination*/
-
+		 /*scanf is input funtion 
+	  %d sign decimal 
+	  &opt_d is address operator */
 
 
 		 switch(opt_D)
@@ -967,7 +971,7 @@ main_D:
 			system("cls");                               /*Clear screen*/
 	printf("\t\t\t =============================\n");
 	printf("\t\t\t Calculate Resistor DC circuit \n");          /* Title Total Resistance */
-	printf("\t\t\t =============================\n\n\n");       /*refer figure */
+	printf("\t\t\t =============================\n\n\n");       /*refer figure DP*/
 
 
 par:/* Goto Parallel*/
@@ -990,7 +994,7 @@ par:/* Goto Parallel*/
 
 	case 2:
 
-    printf("\n\t Resistor P1  (ohm):");/*Input value of P1,P2*/    /*refer figure */
+    printf("\n\t Resistor P1  (ohm):");/*Input value of P1,P2*/    /*refer figure DP1*/
 	scanf("%f",&P1);
 	printf("\t Resistor P2  (ohm):");
 	scanf("%f",&P2);
@@ -1004,7 +1008,7 @@ par:/* Goto Parallel*/
 
 	case 3:
 
-	printf("\n\t Resistor P1  (ohm): ");/*Input value of P1,P2,P3*/   /*refer figure */
+	printf("\n\t Resistor P1  (ohm): ");/*Input value of P1,P2,P3*/   /*refer figure DP2 */
 	scanf("%f",&P1);
 	printf("\t Resistor P2  (ohm): ");
 	scanf("%f",&P2);
@@ -1019,7 +1023,7 @@ par:/* Goto Parallel*/
 
 
 	case 4:
-	printf("\n\t Resistor P1  (ohm): ");/*Input value of P1,P2,P3,P4*/   /*refer figure */
+	printf("\n\t Resistor P1  (ohm): ");/*Input value of P1,P2,P3,P4*/   /*refer figure DP3*/
 	scanf("%f",&P1);
 	printf("\t Resistor P2  (ohm): ");
 	scanf("%f",&P2);
@@ -1036,7 +1040,7 @@ par:/* Goto Parallel*/
 
 
 	case 5:
-	printf("\n\t Resistor P1  (ohm): ");/*Input value of P1,P2,P3,P4,P5*/   /*refer figure */
+	printf("\n\t Resistor P1  (ohm): ");/*Input value of P1,P2,P3,P4,P5*/   /*refer figure DP4*/
 	scanf("%f",&P1);
 	printf("\t Resistor P2  (ohm): ");
 	scanf("%f",&P2);
@@ -1054,15 +1058,15 @@ par:/* Goto Parallel*/
 
 	default:
 		printf("\n\t\t\t < INVALID NUMBER OF RESISTOR >\n\n");
-		goto par; /*if not in 0,2-5 ask again how many parallel resistor*/   /*refer figure */
+		goto par; /*if not in 0,2-5 ask again how many parallel resistor*/  
 	
 		/*End of Parallel Resistor*/
 	}
 
 sir:/*Series Label */
-	printf("\n============================================\n\n");
-	printf("\n\n\t How many Series resistor (0~5): ");
-	scanf("%d",&DS);/*Enter qty of resistor-Series*/  /*refer figure */
+	printf("\n============================================\n");
+	printf("\n\t How many Series resistor (0~5): ");
+	scanf("%d",&DS);/*Enter qty of resistor-Series*/  /*refer figure DS */
 	
     switch(DS)
 	
@@ -1080,7 +1084,7 @@ sir:/*Series Label */
 
 	case 1:
 
-		printf("\n\t Resistor S1  (ohm):");/*Input value S1*/  /*refer figure */
+		printf("\n\t Resistor S1  (ohm):");/*Input value S1*/  /*refer figure DS1*/
 		scanf("%f",&S1);
 		ST=S1;
 
@@ -1091,7 +1095,7 @@ sir:/*Series Label */
 
 	case 2:
 
-		printf("\n\t Resistor S1  (ohm):");/*Input value S1,S2*/  /*refer figure */
+		printf("\n\t Resistor S1  (ohm):");/*Input value S1,S2*/  /*refer figure DS2*/
 		scanf("%f",&S1);
 		printf("\t Resistor S2  (ohm):");
 		scanf("%f",&S2);
@@ -1105,7 +1109,7 @@ sir:/*Series Label */
 
 	case 3:
 
-		printf("\n\t Resistor S1  (ohm):");/*Input value S1,S2,S3*/  /*refer figure */
+		printf("\n\t Resistor S1  (ohm):");/*Input value S1,S2,S3*/  /*refer figure DS3*/
 		scanf("%f",&S1);
 		printf("\t Resistor S2  (ohm):");
 		scanf("%f",&S2);
@@ -1121,7 +1125,7 @@ sir:/*Series Label */
 
 	case 4:
 
-		printf("\n\t Resistor S1  (ohm):");/*Input value S1,S2,S3,S4*/   /*refer figure */
+		printf("\n\t Resistor S1  (ohm):");/*Input value S1,S2,S3,S4*/   /*refer figure DS4*/
 		scanf("%f",&S1);
 		printf("\t Resistor S2  (ohm):");
 		scanf("%f",&S2);
@@ -1139,7 +1143,7 @@ sir:/*Series Label */
 
     case 5:
 
-		printf("\n\t Resistor S1 (ohm):");/*Input value S1,S2,S3,S4,S5*/   /*refer figure */
+		printf("\n\t Resistor S1 (ohm):");/*Input value S1,S2,S3,S4,S5*/   /*refer figure DS5*/
 		scanf("%f",&S1);
 		printf("\t Resistor S2  (ohm):");
 		scanf("%f",&S2);
@@ -1171,9 +1175,9 @@ sir:/*Series Label */
 res: /* Label for Total Resistance */
 
 
-	RT=PT+ST;/*Calculate Series+Pararalle and display the value*/   /*refer figure */
+	RT=PT+ST;/*Calculate Series+Pararalle and display the value*/   /*refer figure DSP*/
 
-	printf("\n============================================\n\n");
+	printf("\n============================================\n");
 
 	printf("\n\t Total Parallel : %.3f ohm\n",PT);
 	printf("\n\t Total Series: %.3f ohm\n ",ST);
@@ -1209,8 +1213,8 @@ res: /* Label for Total Resistance */
 
 			system("cls");
 		  printf("\t\t\t================\n");  /* Title for Thevenin Circuit */
-		  printf("\t\t\t Thevenin Ciruit\n");     /*refer figure */
-		  printf("\t\t\t================\n\n\n");
+		  printf("\t\t\t Thevenin Ciruit\n");     /*refer figure D2.1*/
+		  printf("\t\t\t================\n\n");
 
 
 
@@ -1229,7 +1233,7 @@ res: /* Label for Total Resistance */
 	printf("\t total resistance for ecah line. \n");
 	printf("\t Example if R1 have two paralell resistor\n");	
 	printf("\t calculate the total resistance first \n");
-	printf("\t before entering the data on RT1\n\n\n");
+	printf("\t before entering the data on RT1\n\n");
 
 	printf("\tVoltage Supply (V):");
 	scanf(" %f",&VS);/*get VS*/
@@ -1250,11 +1254,11 @@ res: /* Label for Total Resistance */
     scanf(" %f",&RL);/*Get Value resistor Load*/
 
 
-	printf("\n============================================\n\n");
+	printf("\n============================================\n");
 
 	printf("\n\tStep 1: Open resistor load \n");
 	printf("\t ______[R1]________/    _[R4]____\n");/*Generating diagram*/   
-	printf("\t |              |              |\n");   /*refer figure */
+	printf("\t |              |              |\n");   /*refer figure D2.2*/
 	printf("\t |              |              |\n");
 	printf("\t |              |              |\n");
 	printf("\t|V|            |R|            |R|\n");
@@ -1281,7 +1285,7 @@ printf("\n============================================\n\n");
 
 	printf("\t                  ____[R1+R3]____\n");
 	printf("\t                  |              |\n");
-	printf("\t                  |              |\n");          /*refer figure */
+	printf("\t                  |              |\n");          /*refer figure D2.3*/
 	printf("\t[A]_____[R4]______|              |_____[B]\n");
 	printf("\t                  |              |\n");
 	printf("\t                  |              |\n");
@@ -1299,7 +1303,7 @@ printf("\n============================================\n\n");
 	printf("\n\n\tStep 4:Draw the Thevenin Circuit\n");
     printf("\t to find Voltage Load(VL) & Current Load(IL) \n\n");
 
-	printf("\t ______[RTH]_____\n");/*Diagram*/                /*refer figure */
+	printf("\t ______[RTH]_____\n");/*Diagram*/                /*refer figure D2.4*/
 	printf("\t |              |\n");
 	printf("\t|V|            |L|\n");
 	printf("\t|T|            |R|\n");
@@ -1353,10 +1357,13 @@ printf("\n============================================\n\n");
 	printf("\t\t\tSUPERPOSITION THEROREM \n");
 	printf("\t\t\t======================\n\n");
 
-	printf("\t\t\t Part One \n");                     /*refer figure */
+	printf("\t\t\t Part One \n");                     /*refer figure D3.1*/
 
 	printf("\tEnter Voltage Supply 1 (V) : ");
 	scanf(" %f",&V1);/*Voltage Supply V1*/
+	/*scanf is input funtion 
+	  %f sign float
+	  &V1 is address operator */
 
 	printf("\n\tOkey...then short the VS2 \n and find the total resistance\n\n");
 	printf("\tTotal Resistance (ohm) : ");
@@ -1386,7 +1393,7 @@ printf("\n============================================\n\n");
 
 
 
-	printf("\t\t\t Part Two \n");                           /*refer figure */
+	printf("\t\t\t Part Two \n");                           /*refer figure D3.2*/
 
 	printf("\n\n\tEnter Voltage Supply 2 (V): ");
 	scanf(" %f",&V2);/*Voltage Supply V2*/
@@ -1428,7 +1435,7 @@ CP:
 	printf("\n\t Last step: Check the current path at AX \n\n");/*Find I(superposition)*/  
 	printf("\t    A            B\n");
 	printf("\t_________    _________\n");                       /*Check Current Path*/
-	printf("\t|   |   |    |   |   |\n");                        /*refer figure */
+	printf("\t|   |   |    |   |   |\n");                        /*refer figure D3.3*/
 	printf("\t+   R   +    +   R   -\n");
 	printf("\t-   X   -    -   X   +\n");
 	printf("\t|___|___|    |___|___|\n\n");
@@ -1445,7 +1452,7 @@ printf("\n\t\t\t Option:");/*Choose for determine the Ampere must being subract 
 {	
 	/*Start IF Adding current*/
 	printf("\n\t============================================\n\n");
-	printf("\tADDING-(positive meet negative) \n\n");/*if Add*/   /*refer figure */
+	printf("\tADDING-(positive meet negative) \n\n");/*if Add*/   /*refer figure 3.4*/
 	printf("\t_________ \n");/*image*/
 	printf("\t|   |   |\n");
 	printf("\t+   R   +\n");
@@ -1468,7 +1475,7 @@ printf("\n\t\t\t Option:");/*Choose for determine the Ampere must being subract 
 {
 	/* Start Subtract Current Path */
 	printf("\n\t============================================\n\n");
-	printf("\tSUBTRACT-(positive meet positive) \n\n");/*if Subtract*/   /*refer figure */
+	printf("\tSUBTRACT-(positive meet positive) \n\n");/*if Subtract*/   /*refer figure 3.5*/
 	printf("\t_________ \n");
 	printf("\t|   |   |\n");
 	printf("\t+   R   -\n");
@@ -1487,7 +1494,7 @@ printf("\n\t\t\t Option:");/*Choose for determine the Ampere must being subract 
 
 	/*Display value*/
 
-	printf("\tTotal Current for Rx = %.3f A\n",ISX);    /*refer figure */
+	printf("\tTotal Current for Rx = %.3f A\n",ISX);   
 	printf("\tTotal Voltage for Rx = %.3f V\n\n",VP);
 
 	goto end_CP;
@@ -1501,7 +1508,7 @@ printf("\n\t\t\t Option:");/*Choose for determine the Ampere must being subract 
 	VP=IS*RX; /*Formula*/
 
 	/*Display Value*/
-	printf("\tTotal Current for Rx = %.3f A\n",IS);    /*refer figure */
+	printf("\tTotal Current for Rx = %.3f A\n",IS);   
 	printf("\tTotal Voltage for Rx = %.3f V\n\n",VP);
 
 	goto end_CP;
@@ -1591,7 +1598,7 @@ main_E:
         printf("\t\t\t FAQ @ TUTORIAL \n");
 		printf("\t\t\t ================ \n\n");
 
-		/*refer figure */
+		/*refer figure E*/
 
 	    printf("\t1.What prefix unit this program?\n\n");
 	    printf("\t2.How can I convert SI prefix\n\n");
@@ -1622,7 +1629,7 @@ main_E:
 			system("cls");
 			/*Clear Screen*/
 
-			/*refer figure */
+			/*refer figure E1 */
 			/*What is Prefix Unit*/
 
 		  printf("\t\t\t===============================\n");
@@ -1641,7 +1648,7 @@ main_E:
 		  printf("\t\t\t|______|___|__________|\n");
 		  printf("\t\t\t| Nano | n | 10^(-9)  |\n");
 		  printf("\t\t\t|______|___|__________|\n");
-		  printf("\t\t\t| Micro| \u00b5 | 10^(-6 ) |\n");   /*refer figure */
+		  printf("\t\t\t| Micro| \u00b5 | 10^(-6 ) |\n");   
 		  printf("\t\t\t|______|___|__________|\n");        /*Table Prefix*/
 		  printf("\t\t\t| Mili | m | 10^(-3 ) |\n");
 		  printf("\t\t\t|______|___|__________|\n");
@@ -1660,7 +1667,7 @@ main_E:
 
           scanf(" %c",&YN); /*Input Y/N*/
 
-         if(YN=='N'||YN=='n')
+         if(YN=='Y'||YN=='y')
 		 continue;                       /*Repeat*/
 		 
 		 
@@ -1692,7 +1699,7 @@ main_E:
 			system("cls");
 			/*Clear Screen*/
 
-			/*Refer Figure */
+			/*Refer Figure E2 */
 			/*How to Convert*/
 
 
@@ -1720,9 +1727,9 @@ main_E:
 
 	{
 		/*Start Micro*/
-		/*Refer Figure*/
+		/*Refer Figure E2.1*/
 
-		printf("\tInput data  : ");
+		printf("\tInput data  (Micro): ");
 		scanf(" %f",&micro);
 
 
@@ -1746,9 +1753,9 @@ main_E:
 
 	{
 		/*Start Mili*/
-		/*Refer Figure*/
+		/*Refer Figure E2.2*/
 	
-        printf("\tInput data : ");
+        printf("\tInput data (Mili): ");
 		scanf(" %f",&mili);
 		/*Input data*/
 
@@ -1778,9 +1785,9 @@ main_E:
 	{
 
 		/*Start NoPrefix*/
-		/*Refer Figure*/
+		/*Refer Figure E2.3*/
 
-        printf("\tInput data : ");
+        printf("\tInput data (No-Prefix): ");
 		scanf(" %f",&nopre);
 		/*Input data*/
 
@@ -1808,10 +1815,10 @@ main_E:
 
 	{
 		/*Start Kilo*/
-		/*Refer Figure*/
+		/*Refer Figure E2.4*/
 
       
-	printf("\tInput data : ");
+	printf("\tInput data (Kilo): ");
 	scanf(" %f",&kilo);
 	/*Input data*/
 
@@ -1837,10 +1844,10 @@ main_E:
 
 	{
 		/*Start Mega*/
-		/*Refer Figure*/
+		/*Refer Figure E2.5*/
     
 
-        printf("\tInput data : ");
+        printf("\tInput data (Mega) : ");
 		scanf(" %f",&mega);
 		/*Input data*/
 
@@ -1898,7 +1905,7 @@ main_E:
 
 
 			/*Display Aws */
-			/*Refer figure */
+			/*Refer figure E3 */
 
 		  printf("\t\t\t===========================================\n");
 		  printf("\t\t\tDifferent between series and parallel \n\t\t\t& how to calculate the total resistance?\n");
@@ -1932,7 +1939,7 @@ main_E:
 		  printf("\t\t\t So, It=I1+I2+I3+In\n\n");
 
 
-		  /*Refer figure */
+		  
 		  /*(3) Step by step*/
 
 		  printf("\t=========================================================\n");
@@ -1950,7 +1957,7 @@ main_E:
 		  /*Input Y/N*/
 
 
-         if(YN=='N'||YN=='n')
+         if(YN=='Y'||YN=='y')
 
 		 continue;                       /*Repeat*/
 		 
@@ -1986,7 +1993,7 @@ main_E:
 
 
 			/*What is Thevenin*/
-			/*Refer figure */
+			/*Refer figure E4*/
 
 	      printf("\t\t\t==========================\n");
 		  printf("\t\t\t What is Thevenin Circuit?\n");
@@ -2010,7 +2017,7 @@ main_E:
 
 
 		  /*Step by Step Thevenin*/
-			/*Refer figure */
+			
 		   printf(" \t\t\t USING THIS SYSTEM \n");
 	printf("\t ______[R1]___________[R4]______\n");/*Generating diagram*/
 	printf("\t |              |               |\n");
@@ -2118,7 +2125,7 @@ main_E:
 
 
 			/*Display AWS*/
-			/*Refer Figure */
+			/*Refer Figure E5*/
 
 		printf("\t\t======================================\n\n");
 		  printf("\t\t\t What is Superposition Circuit?\n\n");
@@ -2138,7 +2145,7 @@ main_E:
 
 
 		  /*Display Step by Step*/
-			/*Refer Figure */
+			
 
 		   printf(" \t\t\t USING THIS SYSTEM \n");
 
@@ -2201,7 +2208,7 @@ main_E:
 
 
 			/*What is ohm law*/
-			/*Refer figure*/
+			/*Refer figure E6*/
 
     printf("\t\t\t================\n");
     printf("\t\t\tWhat is Ohms Law\n");
@@ -2261,7 +2268,7 @@ main_E:
 
 
 			/*What is Divider*/
-			/*Refer figure*/
+			/*Refer figure E7*/
 
 		   printf("\t\t\t======================================\n");
 		  printf("\t\t\tWhat is Voltage or current divider ?\n");
@@ -2279,7 +2286,7 @@ main_E:
 
 
 		  /*Step by step*/
-			/*Refer figure*/
+			
 
     printf("\t\t=========================================================\n");
     printf("\t\t\tGuide to use the parallel circuit programe\n");
@@ -2373,7 +2380,7 @@ main_E:
 		/*Clear Screen*/
 
 		/*Display Credit*/
-		/*Refer figure*/
+		
 
 	    printf("\t\t\t =================================================\n"); 
 		printf("\t\t\t         <Thank you for using our program>       \n");
@@ -2413,7 +2420,8 @@ main_E:
    /*End Programe*/
    /*End of Main Menu*/
    /*At the end of the day the program will end*/
-
+   /*All code can be found at :
+   https://github.com/DanielAmani/DC-101-GMI-PBL1/blob/master/PBL%20Finele.cpp */
 return 0;            
 
 
